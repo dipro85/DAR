@@ -56,8 +56,6 @@ transform: translateX(-50%) TranslateY(-50%);
 <input class="textview"  android:layout_width="match_parent" android:layout_height="wrap_content" name="textview">
 </form>
 
-
-
 <table border="0">
 
 <tr>
@@ -81,21 +79,12 @@ transform: translateX(-50%) TranslateY(-50%);
 <td><input type="button" value="6" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(6)" </td>
 <td><input type="button" value="-" android:layout_width="match_parent" android:layout_height="wrap_content" style="background-color: #E1E1E1; color: white;" class="button" onclick="insert('-')"</td>
 
-
-
-
-
 </tr>
 <tr>
 <td><input type="button" value="1" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(1)"</td>
 <td><input type="button" value="2" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(2)"</td>
 <td><input type="button" value="3" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(3)"</td>
 <td><input type="button" value="+" android:layout_width="match_parent" android:layout_height="wrap_content"  style="background-color: #E1E1E1; color: white;" class="button" onclick="insert('+')"</td>
-
-
-
-
-
 
 </tr>
 <tr>
@@ -105,20 +94,11 @@ transform: translateX(-50%) TranslateY(-50%);
 <td colspan="1"><input type="button"  android:layout_width="match_parent" android:layout_height="wrap_content" value="%" class="button"  onclick="insert('%')" </td>
 <td rowspan="2"><input type="button" android:layout_width="match_parent" android:layout_height="wrap_content" value="=" class="button1"  style="height: 210; width: 85" onclick="equal()" </td>
 
-
-
-
 </tr>
 <tr>
 <td colspan="1"><input type="button" android:layout_width="match_parent" android:layout_height="wrap_content" value="(" class="button" style="height: 127; width: 85" onclick="insert('(')" </td>
 <td colspan="1"><input type="button"  android:layout_width="match_parent" android:layout_height="wrap_content" value=")" class="button" style="height: 127; width: 85" onclick="insert(')')" </td>
 <td rowspan="1"><input type="button" android:layout_width="match_parent" android:layout_height="wrap_content" value="Del" class="button" style="height: 127; width: 85"  onclick="back()" </td>
-
-
-
-</tr>
-<tr>
-
 
 </tr>
 
@@ -155,8 +135,7 @@ function doMath2(){
   var result = (inputNum1*inputNum1);
   document.form.textview.value = result;
 }
-
-
+    
 </script>
 </body>
 </html>
