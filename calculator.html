@@ -1,0 +1,162 @@
+<html>
+<title>Calculator</title>
+<link rel="icon" href="https://static1.squarespace.com/static/5050bf2ee4b03f467b8fe9ff/t/516c360ee4b0e1df4cf01382/1366046223409/Icon_Calculator.jpg">
+<head></head>
+<style>
+*{
+margin:0;
+padding: 0;
+}
+.button1
+{
+background-color: red;
+width:85;
+height:80;
+margin:0;
+font-size:25;
+cursor: pointer;
+border: none;
+color: white
+}
+.button
+{
+width:85;
+height:79;
+margin:0;
+font-size:25;
+cursor: pointer;
+border: none;
+background-color: #FCFCFC;
+
+}
+.textview
+{
+width:348;
+height:120;
+margin:0;
+font-size:45;
+padding: 5;
+background-color: white;
+color: black;
+
+    
+}
+.main
+{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) TranslateY(-50%);
+}
+
+</style>
+<body background="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
+<div class="main">
+<form name="form">
+<input class="textview"  android:layout_width="match_parent" android:layout_height="wrap_content" name="textview">
+</form>
+
+
+
+<table border="0">
+
+<tr>
+<td><input type="button" value="C" android:layout_width="match_parent" android:layout_height="wrap_content" style="background-color: #E1E1E1; color: white;" class="button" onclick="clearr()"</td>
+<td><button type="button" id="SQRT" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" style="background-color: #E1E1E1; color: white;" onclick="doMath()">&#x0221A;</button></td>
+<td><button type="button" id="SQRT1" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" style="background-color: #E1E1E1; color: white;"  onclick="doMath2()">x<sup>2</sup></button></td>
+
+<td><input type="button" value="/" android:layout_width="match_parent" android:layout_height="wrap_content" style="background-color: #E1E1E1; color: white;" class="button" onclick="insert('/')"</td>
+
+</tr>
+<tr>
+<td><input type="button" value="7" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(7)"</td>
+<td><input type="button" value="8" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(8)"</td>
+<td><input type="button" value="9" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(9)"</td>
+<td><input type="button" value="x" android:layout_width="match_parent" android:layout_height="wrap_content" style="background-color: #E1E1E1; color: white;" class="button" onclick="insert('*')"</td>
+
+</tr>
+<tr>
+<td><input type="button" value="4" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(4)"</td>
+<td><input type="button" value="5" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(5)"</td>
+<td><input type="button" value="6" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(6)" </td>
+<td><input type="button" value="-" android:layout_width="match_parent" android:layout_height="wrap_content" style="background-color: #E1E1E1; color: white;" class="button" onclick="insert('-')"</td>
+
+
+
+
+
+</tr>
+<tr>
+<td><input type="button" value="1" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(1)"</td>
+<td><input type="button" value="2" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(2)"</td>
+<td><input type="button" value="3" android:layout_width="match_parent" android:layout_height="wrap_content" class="button" onclick="insert(3)"</td>
+<td><input type="button" value="+" android:layout_width="match_parent" android:layout_height="wrap_content"  style="background-color: #E1E1E1; color: white;" class="button" onclick="insert('+')"</td>
+
+
+
+
+
+
+</tr>
+<tr>
+<td colspan="1"><input type="button" android:layout_width="match_parent" android:layout_height="wrap_content" value="0" class="button"  onclick="insert(0)" </td>
+<td colspan="1"><input type="button" android:layout_width="match_parent" android:layout_height="wrap_content" value="." class="button"  onclick="insert('.')" </td>
+
+<td colspan="1"><input type="button"  android:layout_width="match_parent" android:layout_height="wrap_content" value="%" class="button"  onclick="insert('%')" </td>
+<td rowspan="2"><input type="button" android:layout_width="match_parent" android:layout_height="wrap_content" value="=" class="button1"  style="height: 210; width: 85" onclick="equal()" </td>
+
+
+
+
+</tr>
+<tr>
+<td colspan="1"><input type="button" android:layout_width="match_parent" android:layout_height="wrap_content" value="(" class="button" style="height: 127; width: 85" onclick="insert('(')" </td>
+<td colspan="1"><input type="button"  android:layout_width="match_parent" android:layout_height="wrap_content" value=")" class="button" style="height: 127; width: 85" onclick="insert(')')" </td>
+<td rowspan="1"><input type="button" android:layout_width="match_parent" android:layout_height="wrap_content" value="Del" class="button" style="height: 127; width: 85"  onclick="back()" </td>
+
+
+
+</tr>
+<tr>
+
+
+</tr>
+
+</table>
+</div>
+
+
+<script>
+
+function insert(num)
+{
+document.form.textview.value=document.form.textview.value+num
+}
+function equal()
+{
+document.form.textview.value=eval(document.form.textview.value);
+}
+function clearr()
+{
+document.form.textview.value="";
+}
+function back()
+{
+var exp=document.form.textview.value;
+document.form.textview.value=exp.substring(0, exp.length-1);
+}
+function doMath(){
+  var inputNum1=document.form.textview.value;
+  var result = Math.sqrt(inputNum1);
+  document.form.textview.value = result;
+}
+function doMath2(){
+  var inputNum1=document.form.textview.value;
+  var result = (inputNum1*inputNum1);
+  document.form.textview.value = result;
+}
+
+
+</script>
+</body>
+</html>
